@@ -1,0 +1,6 @@
+CAP Exercises
+===
+## Build
+```
+make
+```
