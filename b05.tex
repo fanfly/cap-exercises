@@ -1,0 +1,29 @@
+\documentclass[12pt]{article}
+\usepackage[papersize={8cm,12cm},margin={.5cm,.5cm}]{geometry}
+\usepackage{common}
+\newcommand{\particle}[1]{\tikz[baseline=-.85ex]{\draw[fill=#1] (0,0) circle (.15cm);}}
+\begin{document}
+\begin{problem}
+  \item[5.] 表（四）列有鋁離子（\ch{Al^3+}）中所含有的三種粒子的個數，其中 \particle{black}、\particle{black!25}、\particle{black!0} 可能為質子、中子或電子。根據表中資訊判斷，下列何者正確？
+  \begin{table}[ht]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \vspace*{-1ex}
+    \caption*{表（四）}
+    \vspace*{-1ex}
+    \begin{tabular}{|c|c|}
+      \hline
+      粒子 & 個數 \\ \hline
+      \particle{black} & 10 \\ \hline
+      \particle{black!25} & 13 \\ \hline
+      \particle{white} & 14 \\ \hline
+    \end{tabular}
+  \end{table}
+  \begin{choices}
+    \item 粒子 \particle{black} 是電子
+    \item 粒子 \particle{white} 是質子
+    \item 粒子 \particle{black} 位於原子核內
+    \item 粒子 \particle{white} 位於原子核外
+  \end{choices}
+\end{problem}
+\end{document}
