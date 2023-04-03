@@ -8,6 +8,6 @@
 \setlength{\parindent}{0pt}
 \setCJKmainfont{Noto Serif CJK TC}
 \linespread{1.15}
-\newenvironment{problem}{\thispagestyle{empty}\topskip0pt\vspace*{0pt plus 1fil}\begin{enumerate}[leftmargin=*,labelsep=.5em,align=left]}{\end{enumerate}\vspace*{0pt plus 1fil}}
+\newenvironment{problem}[1][widest=0]{\thispagestyle{empty}\topskip0pt\vspace*{0pt plus 1fil}\begin{enumerate}[left=0pt,#1]}{\end{enumerate}\vspace*{0pt plus 1fil}}
 \newenvironment{choices}{\begin{enumerate}[label=(\Alph*),itemsep=1ex,parsep=0ex,topsep=0ex,leftmargin=*,labelsep=.2em,align=left]}{\end{enumerate}}
 \newcommand{\fraction}[2]{\rule[-.7\baselineskip]{0pt}{1.8\baselineskip}\dfrac{#1}{#2}}
