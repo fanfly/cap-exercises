@@ -1,16 +1,16 @@
 TEXFILES = $(wildcard *.tex)
-OBJS = $(TEXFILES:%.tex=%.png)
-BUILDDIR = .build
+OBJS = $(TEXFILES:%.tex=target/%.png)
 
 .PHONY: all clean
 all: $(OBJS)
 
-%.png: %.pdf
+target/%.png: build/%.pdf
+	mkdir -p target
 	gm convert -density 600 $< $@
 
-%.pdf: %.tex common.sty
-	latexmk -pdf -pdflatex='xelatex -halt-on-error' -outdir=$(BUILDDIR) $<
-	cp $(BUILDDIR)/$@ $@
+build/%.pdf: %.tex common.sty
+	mkdir -p build
+	latexmk -pdf -pdflatex='xelatex -halt-on-error' -outdir=build $<
 
 clean:
-	rm -rf $(BUILDDIR) *.pdf *.png
+	rm -rf build target
