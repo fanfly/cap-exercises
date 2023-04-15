@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage[papersize={8cm,18cm},margin={.5cm,.5cm}]{geometry}
+\usepackage{common}
+\usepackage{pgfplots}
+\usepgfplotslibrary{statistics}
+\begin{document}
+\begin{problem}
+  \item[5.] 表（二）列出九年一班 8 名學生參加投籃測驗的投進球數。若將 8 名學生的投進球數的分布繪製為盒狀圖，應為下列何者？
+  \begin{table}[ht]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \vspace*{-1ex}
+    \caption*{表（二）}
+    \vspace*{-1.5ex}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+      \hline
+      座號 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ \hline
+      \begin{tabular}{@{}c@{}}\footnotesize 投進球數 \\[-.6em] \footnotesize(球)\end{tabular} & 0 & 1 & 1 & 1 & 2 & 2 & 4 & 4 \\ \hline
+    \end{tabular}
+    \vspace*{-2ex}
+  \end{table}
+  \begin{choices}
+    \item
+    \begin{tikzpicture}[baseline=.5cm]
+      \begin{axis}[
+        width=6cm,height=3cm,xtick pos=left,
+        xlabel={投進球數 (球)},
+        xmin=-.5,xmax=4.5,ymin=0,ymax=2,
+        xtick={0,1,2,3,4},yticklabels=\empty,
+        every x tick/.style={black,thick},every y tick/.style={draw=none},
+        xlabel style={at={(axis description cs:1.05,-.15)},anchor=east,font=\footnotesize},
+      ]
+        \addplot[boxplot prepared={lower whisker=0,lower quartile=1,median=1.5,upper quartile=3,upper whisker=4}] coordinates {};
+      \end{axis}
+    \end{tikzpicture}
+    \item
+    \begin{tikzpicture}[baseline=.5cm]
+      \begin{axis}[
+        width=6cm,height=3cm,xtick pos=left,
+        xlabel={投進球數 (球)},
+        xmin=-.5,xmax=4.5,ymin=0,ymax=2,
+        xtick={0,1,2,3,4},yticklabels=\empty,
+        every x tick/.style={black,thick},every y tick/.style={draw=none},
+        xlabel style={at={(axis description cs:1.05,-.15)},anchor=east,font=\footnotesize},
+      ]
+        \addplot[boxplot prepared={lower whisker=0,lower quartile=1,median=1.5,upper quartile=2.5,upper whisker=4}] coordinates {};
+      \end{axis}
+    \end{tikzpicture}
+    \item
+    \begin{tikzpicture}[baseline=.5cm]
+      \begin{axis}[
+        width=6cm,height=3cm,xtick pos=left,
+        xlabel={投進球數 (球)},
+        xmin=-.5,xmax=4.5,ymin=0,ymax=2,
+        xtick={0,1,2,3,4},yticklabels=\empty,
+        every x tick/.style={black,thick},every y tick/.style={draw=none},
+        xlabel style={at={(axis description cs:1.05,-.15)},anchor=east,font=\footnotesize},
+      ]
+        \addplot[boxplot prepared={lower whisker=0,lower quartile=1,median=2,upper quartile=3,upper whisker=4}] coordinates {};
+      \end{axis}
+    \end{tikzpicture}
+    \item
+    \begin{tikzpicture}[baseline=.5cm]
+      \begin{axis}[
+        width=6cm,height=3cm,xtick pos=left,
+        xlabel={投進球數 (球)},
+        xmin=-.5,xmax=4.5,ymin=0,ymax=2,
+        xtick={0,1,2,3,4},yticklabels=\empty,
+        every x tick/.style={black,thick},every y tick/.style={draw=none},
+        xlabel style={at={(axis description cs:1.05,-.15)},anchor=east,font=\footnotesize},
+      ]
+        \addplot[boxplot prepared={lower whisker=0,lower quartile=1,median=2,upper quartile=2.5,upper whisker=4}] coordinates {};
+      \end{axis}
+    \end{tikzpicture}
+  \end{choices}
+\end{problem}
+\end{document}
