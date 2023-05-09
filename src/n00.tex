@@ -1,0 +1,23 @@
+\documentclass[12pt]{article}
+\usepackage[papersize={8cm,10cm},margin={.5cm,.5cm}]{geometry}
+\usepackage{common}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\newcommand{\x}{\colorbox{red!30}{\rule[-.2\baselineskip]{0pt}{.9\baselineskip}$x$}}
+\newcommand{\y}{\colorbox{blue!30}{\rule[-.2\baselineskip]{0pt}{.9\baselineskip}$y$}}
+\newcommand{\coeffa}{\colorbox{orange!30}{\rule[-.2\baselineskip]{0pt}{.9\baselineskip}$a$}}
+\newcommand{\coeffb}{\colorbox{teal!30}{\rule[-.2\baselineskip]{0pt}{.9\baselineskip}$b$}}
+\newcommand{\coeffc}{\colorbox{teal!30}{\rule[-.2\baselineskip]{0pt}{.9\baselineskip}$c$}}
+\begin{document}
+\small
+\begin{problem}[label={\Alph*.},widest=A,parsep=0ex]
+  \item 點和直線的關係的例子：
+  \begin{enumerate}[label=(\arabic*),left=0pt]
+    \item 點 $(\textcolor{red!90!black}{3}, \textcolor{blue}{4})$ 在 $\x = 3$ 的圖形上，但是不在 $\x = 4$ 的圖形上。
+    \item 點 $(\textcolor{red!90!black}{3}, \textcolor{blue}{4})$ 在 $\y = 4$ 的圖形上，但是不在 $\y = 3$ 的圖形上。
+    \item 點 $(\textcolor{red!90!black}{3}, \textcolor{blue}{4})$ 在 $\x + \y = 7$ 的圖形上，但是不在 $\x + \y = 5$ 的圖形上。
+  \end{enumerate}
+  \item 我們會用 $y = \coeffa x + \coeffb$ 表示一般（不是鉛直線）的直線方程式。
+  \item 我們會用 $x = \coeffc$ 表示鉛直線的方程式。
+\end{problem}
+\end{document}
